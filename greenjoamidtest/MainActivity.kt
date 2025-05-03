@@ -1,4 +1,4 @@
-package com.example.ytxiaotestb
+package com.example.greenjoamidtest
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,20 +11,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.ytxiaotestb.ui.theme.YtxiaoTestBTheme
+import com.example.greenjoamidtest.example02.uicomponents.LoginMainScreen
+import com.example.greenjoamidtest.ui.theme.GreenjoaMidTestTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            YtxiaoTestBTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            GreenjoaMidTestTheme {
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    Greeting(
+//                        name = "Android",
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+//                }
+                LoginMainScreen()
             }
         }
     }
@@ -41,7 +43,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    YtxiaoTestBTheme {
+    GreenjoaMidTestTheme {
         Greeting("Android")
     }
 }
